@@ -1,0 +1,43 @@
+<div class="register-container">
+  <div class="register-card">
+    <div class="text-center">
+      <img src="https://1000marcas.net/wp-content/uploads/2021/10/Chubb-logo.jpg" style="border-radius: 100%;" alt="Registro" class="register-image">
+    </div>
+
+    <h2 class="text-center text-light mb-4">Crear Cuenta</h2>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="name" class="form-label text-light">Nombre</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person"></i></span>
+          <input type="text" id="name" [(ngModel)]="name" name="name" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="form-label text-light">Correo</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+          <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="form-label text-light">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-lock"></i></span>
+          <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+        </div>
+      </div><br>
+
+      <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <p class="text-light">¿Ya tienes una cuenta?  
+        <a routerLink="/login" class="text-warning fw-bold">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </div>
+</div>

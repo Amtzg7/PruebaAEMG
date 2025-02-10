@@ -1,0 +1,35 @@
+<div class="login-container" style="background-color: black;">
+  <div class="login-card">
+    <div class="text-center">
+      <img src="https://1000marcas.net/wp-content/uploads/2021/10/Chubb-logo.jpg" style="border-radius: 100%;" alt="Login" class="login-image">
+    </div>
+
+    <h2 class="text-center text-light mb-4">Bienvenido</h2>
+
+    <form [formGroup]="formLogin" (ngSubmit)="iniciarSesion()">
+      <div class="mb-4">
+        <label for="correo" class="form-label text-light">Correo</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+          <input type="email" id="correo" formControlName="correo" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="contrasena" class="form-label text-light">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-lock"></i></span>
+          <input type="password" id="contrasena" formControlName="contrasena" class="form-control" required>
+        </div><br>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <p class="text-light">¿No tienes una cuenta?  
+        <a routerLink="/register" class="text-warning fw-bold">Regístrate aquí</a>
+      </p>
+    </div>
+  </div>
+</div>
